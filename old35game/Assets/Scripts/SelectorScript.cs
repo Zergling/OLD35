@@ -61,4 +61,30 @@ public class SelectorScript : MonoBehaviour
 
 
 	}
+
+    public string GetPolymorph()
+    {
+        switch (select)
+        {
+            case 0:
+                {
+                    return "Walker";
+                    break;
+                }
+
+            case 1:
+                {
+                    return "Jumper";
+                    break;
+                }
+
+            case 2:
+                {
+                    return "Walker";
+                    break;
+                }
+        }
+
+        return "Walker";
+    }
 }
