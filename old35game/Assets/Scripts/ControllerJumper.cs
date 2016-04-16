@@ -18,25 +18,22 @@ public class ControllerJumper : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (grounded == false)
-        {
-            move = Input.GetAxis("Horizontal");
-        }
+        move = Input.GetAxis("Horizontal");
     }
 
     void Update()
     {
-        if (grounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
+        GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+
+        if (move > 0 && grounded)
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
         }
 
-        GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
-
-        if (move > 0 && !facingRight)
-            Flip();
-        else if (move < 0 && facingRight)
-            Flip();
+        if (move < 0 && grounded)
+        {
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
+        }
     }
 
     void OnCollisionEnter2D (Collision2D c)
@@ -67,5 +64,11 @@ public class ControllerJumper : MonoBehaviour
 static class Constants
 {
     public static string GROUND_TAG = "GROUND";
+<<<<<<< HEAD
     public static int Money = 0;
+=======
+    public static string WALKER_POLYIMAGE = "WalkerPolyImage";
+    public static string JUMPER_POLYIMAGE = "JumperPolyImage";
+    public static string SMALLWALKER_POLYIMAGE = "SmallWalkerPolyImage";
+>>>>>>> e43e6db586a1b6d86f389dce715b481158c86d30
 }
