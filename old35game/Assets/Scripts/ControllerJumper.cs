@@ -64,11 +64,8 @@ public class ControllerJumper : MonoBehaviour
 static class Constants
 {
     public static string GROUND_TAG = "GROUND";
-<<<<<<< HEAD
     public static int Money = 0;
-=======
     public static string WALKER_POLYIMAGE = "WalkerPolyImage";
     public static string JUMPER_POLYIMAGE = "JumperPolyImage";
     public static string SMALLWALKER_POLYIMAGE = "SmallWalkerPolyImage";
->>>>>>> e43e6db586a1b6d86f389dce715b481158c86d30
 }
