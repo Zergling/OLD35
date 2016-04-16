@@ -1,16 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Controller : MonoBehaviour
+public class ControllerJumper : MonoBehaviour
 {
     public float maxSpeed = 10f;
     public float jumpForce = 700f;
     bool facingRight = true;
     bool grounded;
-    public Transform groundCheck;
-    public float groundRadius = 0.2f;
-    public LayerMask whatIsGround;
-
     public float move;
 
     // Use this for initialization
@@ -22,7 +18,10 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        move = Input.GetAxis("Horizontal");
+        if (grounded == false)
+        {
+            move = Input.GetAxis("Horizontal");
+        }
     }
 
     void Update()
@@ -44,6 +43,7 @@ public class Controller : MonoBehaviour
     {
         if (c.collider.tag.Equals(Constants.GROUND_TAG))
         {
+            move = 0;
             grounded = true;
             Debug.Log(grounded);
         }
