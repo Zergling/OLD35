@@ -67,4 +67,5 @@ public class ControllerJumper : MonoBehaviour
 static class Constants
 {
     public static string GROUND_TAG = "GROUND";
+    public static int Money = 0;
 }
