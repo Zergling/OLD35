@@ -41,7 +41,7 @@ public class SelectorScript : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        if (Input.GetKeyUp(KeyCode.PageDown))
+        if (Input.GetKeyUp(KeyCode.LeftBracket) || Input.GetKeyUp(KeyCode.Joystick1Button2))
         {
             select--;
             select = CheckSelect(select, selectMax);
@@ -50,7 +50,7 @@ public class SelectorScript : MonoBehaviour
             gameObject.transform.position = obj.transform.position;
         }
 
-        if (Input.GetKeyUp(KeyCode.PageUp))
+        if (Input.GetKeyUp(KeyCode.RightBracket) || Input.GetKeyUp(KeyCode.Joystick1Button1))
         {
             select++;
             select = CheckSelect(select, selectMax);
