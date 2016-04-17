@@ -25,7 +25,7 @@ public class ControllerSlag2 : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Backspace))
+        if (Input.GetKeyUp(KeyCode.Backspace) || Input.GetKeyUp(KeyCode.Joystick1Button0))
         {
             if (gravityRight == true)
             {
@@ -39,7 +39,7 @@ public class ControllerSlag2 : MonoBehaviour
             }
         }
 
-        GetComponent<Rigidbody2D>().velocity = new Vector2(move2 * maxSpeed2, GetComponent<Rigidbody2D>().velocity.y);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, move2 * maxSpeed2);
     }
 
     void Flip2()

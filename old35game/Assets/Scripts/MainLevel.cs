@@ -12,10 +12,18 @@ public class MainLevel : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
+        /*
         if (Input.GetKeyUp(KeyCode.T))
         {
             Debug.Log("Go to TEST LEVEL");
             UnityEngine.SceneManagement.SceneManager.LoadScene("TestLevel");
+        }
+         * */
+
+        if (Input.GetKeyUp(KeyCode.N) || Input.GetKeyUp(KeyCode.Joystick1Button0))
+        {
+            Constants.PlayerDied = false;
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Training1");
         }
 	}
 }
