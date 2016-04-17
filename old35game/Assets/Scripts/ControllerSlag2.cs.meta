@@ -1,3 +1,4 @@
+<<<<<<< HEAD:old35game/Assets/Scripts/ControllerSlag2.cs.meta
 fileFormatVersion: 2
 guid: 1610f7c5e56065c40990bbce10b53f09
 timeCreated: 1460877387
@@ -10,3 +11,17 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+=======
+fileFormatVersion: 2
+guid: 177d327b98f81b34c9713eddfb4a560e
+timeCreated: 1460801011
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> 90439fa57ce3591bc87dcb8c575dea7853d4372f:old35game/Assets/Scripts/Coins.cs.meta

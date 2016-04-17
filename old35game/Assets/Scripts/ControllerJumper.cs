@@ -13,6 +13,7 @@ public class ControllerJumper : MonoBehaviour
     void Start()
     {
         grounded = false;
+        Constants.PlayerDied = false;
     }
 
     // Update is called once per frame
@@ -58,7 +59,14 @@ public class ControllerJumper : MonoBehaviour
 
 static class Constants
 {
+    public static bool PlayerDied;
     public static string GROUND_TAG = "GROUND";
+<<<<<<< HEAD
+=======
+    public static string PLAYER_TAG = "PLAYER";
+    public static Vector3 SpawnPosition;
+    public static int Money = 0;
+>>>>>>> 90439fa57ce3591bc87dcb8c575dea7853d4372f
     public static string WALKER_POLYIMAGE = "WalkerPolyImage";
     public static string JUMPER_POLYIMAGE = "JumperPolyImage";
     public static string SMALLWALKER_POLYIMAGE = "SmallWalkerPolyImage";
