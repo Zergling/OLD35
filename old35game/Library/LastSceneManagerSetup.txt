@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Levels/TestLevel.unity
+=======
+- path: Assets/Levels/Training2.unity
+>>>>>>> d0897f2dde8e0546c3fb0ec1d6727e60209dac7b
   isLoaded: 1
   isActive: 1
