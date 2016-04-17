@@ -10,6 +10,7 @@ public class EnemyVerticalController : MonoBehaviour
     public float Direction;
     Vector3 DownWallPoosition;
     Vector3 UpWallPosition;
+    public float RotationSpeed;
 	// Use this for initialization
 	void Start ()
     {
@@ -23,6 +24,7 @@ public class EnemyVerticalController : MonoBehaviour
 	void Update ()
     {
         position.y += Speed * Direction;
+        gameObject.transform.Rotate(0, 0, RotationSpeed*Direction);
 
         gameObject.transform.position = position;
         if (Direction > 0)
