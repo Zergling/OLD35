@@ -14,6 +14,7 @@ public class ControllerJumper : MonoBehaviour
     {
         grounded = false;
         Constants.PlayerDied = false;
+        Constants.MakeGravityDefault();
     }
 
     // Update is called once per frame

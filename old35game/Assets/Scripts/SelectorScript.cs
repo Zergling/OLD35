@@ -10,11 +10,12 @@ public class SelectorScript : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        selectMax = 3;
+        selectMax = 4;
         selections = new string[selectMax];
         selections[0] = Constants.WALKER_POLYIMAGE;
         selections[1] = Constants.JUMPER_POLYIMAGE;
         selections[2] = Constants.SMALLWALKER_POLYIMAGE;
+        selections[3] = Constants.WALLSLAGGER_POLYIMAGE;
 
         select = 0;
 
@@ -60,41 +61,11 @@ public class SelectorScript : MonoBehaviour
             GameObject obj = GameObject.Find(selections[select]);
             gameObject.transform.position = obj.transform.position;
         }
-
-
 	}
 
     public string GetPolymorph()
     {
-        switch (select)
-        {
-            case 0:
-                {
-                    return "Walker";
-                    for (int i = 0; i < 10; i++)
-                    {
-                        Invo[i].active = false;
-                    }
-                    break;
-                }
-
-            case 1:
-                {
-                    return "Jumper";
-                    for (int i = 0; i < 10; i++)
-                    {
-                        Invo[i].active = false;
-                    }
-                    break;
-                }
-
-            case 2:
-                {
-                    return "Slagger";
-                    break;
-                }
-        }
-
-        return "Walker";
+        SelectionScript script = GameObject.Find(selections[select]).GetComponent<SelectionScript>();
+        return script.GetName();
     }
 }

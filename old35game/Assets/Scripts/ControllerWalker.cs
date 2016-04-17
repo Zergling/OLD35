@@ -8,6 +8,13 @@ public class ControllerWalker : MonoBehaviour
 
     public float move;
 
+    void Start()
+    {
+        Constants.PlayerDied = false;
+        //Debug.Log(Constants.DefaultGravity.x + "  " + Constants.DefaultGravity.y);
+        Constants.MakeGravityDefault();
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
