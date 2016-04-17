@@ -4,7 +4,7 @@ using System.Collections;
 public class ControllerJumper : MonoBehaviour
 {
     public float maxSpeed = 10f;
-    public float jumpForce = 700f;
+    public float jumpForce = 200f;
     bool facingRight = true;
     bool grounded;
     public float move;
@@ -25,12 +25,7 @@ public class ControllerJumper : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
-        if (move > 0 && grounded)
-        {
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
-        }
-
-        if (move < 0 && grounded)
+        if (move != 0 && grounded)
         {
             GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
         }
@@ -64,7 +59,6 @@ public class ControllerJumper : MonoBehaviour
 static class Constants
 {
     public static string GROUND_TAG = "GROUND";
-    public static int Money = 0;
     public static string WALKER_POLYIMAGE = "WalkerPolyImage";
     public static string JUMPER_POLYIMAGE = "JumperPolyImage";
     public static string SMALLWALKER_POLYIMAGE = "SmallWalkerPolyImage";

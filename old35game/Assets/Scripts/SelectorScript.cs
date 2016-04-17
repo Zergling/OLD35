@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SelectorScript : MonoBehaviour
 {
+    GameObject [] Invo;
     int select;
     int selectMax;
     string[] selections;
@@ -41,6 +42,7 @@ public class SelectorScript : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
+        Invo = GameObject.FindGameObjectsWithTag("Invis");
         if (Input.GetKeyUp(KeyCode.LeftBracket) || Input.GetKeyUp(KeyCode.Joystick1Button2))
         {
             select--;
@@ -69,18 +71,26 @@ public class SelectorScript : MonoBehaviour
             case 0:
                 {
                     return "Walker";
+                    for (int i = 0; i < 10; i++)
+                    {
+                        Invo[i].active = false;
+                    }
                     break;
                 }
 
             case 1:
                 {
                     return "Jumper";
+                    for (int i = 0; i < 10; i++)
+                    {
+                        Invo[i].active = false;
+                    }
                     break;
                 }
 
             case 2:
                 {
-                    return "Walker";
+                    return "Slagger";
                     break;
                 }
         }
